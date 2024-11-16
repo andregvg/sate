@@ -1,7 +1,7 @@
 {
   "name": "agvgdev/sate",
   "description": "Sistema de agendamento de transporte extraclasse",
-  "type": "project",
+  "minimum-stability": "stable",
   "authors": [
     {
       "name": "André Gonçalves",
