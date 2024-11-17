@@ -2,15 +2,16 @@
 
 namespace App\Core;
 
-use App\Controllers\HomeController;
 use Slim\App;
 
-class Routes {
+class Routes
+{
+    public static function register(App $app): void
+    {
+        // Rotas publicas
+        $app->get('/', \App\Controllers\HomeController::class . ':index');
 
-    public static function register(App $app): void {
-
-        // Rotas públicas
-        $app->get('/', [HomeController::class, 'index']);
+        // Outras rotas...
 
         // Rotas de autenticação
 
@@ -21,5 +22,6 @@ class Routes {
         // Rotas de escolas
 
         // Rotas de agendamentos
+
     }
 }
