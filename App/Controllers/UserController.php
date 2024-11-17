@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function index(Request $request, Response $response): Response
     {
-        return $this->view->render($response, 'pages/users.twig', [
+        return $this->view->render($response, 'pages/users-list.twig', [
             'title' => 'Usuários'
         ]);
     }

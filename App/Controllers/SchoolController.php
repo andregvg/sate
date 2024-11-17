@@ -10,7 +10,7 @@ class SchoolController extends Controller
 {
     public function index(Request $request, Response $response): Response
     {
-        return $this->view->render($response, 'pages/schools.twig', [
+        return $this->view->render($response, 'pages/schools-list.twig', [
             'title' => 'Escolas'
         ]);
     }

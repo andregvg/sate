@@ -1,18 +1,18 @@
-{% extends "base.twig" %}
+{% extends "layouts/base.twig" %}
 
 {% block content %}
 <div class="crud-form">
     <h2>Gerenciar Agendamentos</h2>
-    <form method="POST" action="/schedules/save">
+    <form method="POST" action="/schedules/new">
         <div>
             <label for="school_id">Escola:</label>
-            <select id="school_id" name="school_id" required>
+            <select id="school_id" name="school_id">
                 <!-- Opções de escolas dinâmicas -->
             </select>
         </div>
         <div>
             <label for="bus_id">Ônibus:</label>
-            <select id="bus_id" name="bus_id" required>
+            <select id="bus_id" name="bus_id">
                 <!-- Opções de ônibus dinâmicas -->
             </select>
         </div>
