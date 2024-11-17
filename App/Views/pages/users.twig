@@ -1,5 +1,42 @@
-{% extends 'layouts/base.twig' %}
+{% extends "base.twig" %}
+
 {% block content %}
-<h1>Usuários</h1>
-<p>Lista de usuários cadastrados.</p>
+<div class="crud-form">
+    <h2>Gerenciar Usuários</h2>
+    <form method="POST" action="/users/save">
+        <div>
+            <label for="school_id">Escola:</label>
+            <select id="school_id" name="school_id">
+                <!-- Opções de escolas dinâmicas -->
+            </select>
+        </div>
+        <div>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+        <div>
+            <label for="type">Tipo:</label>
+            <select id="type" name="type">
+                <option value="admin">Administrador</option>
+                <option value="user">Usuário</option>
+            </select>
+        </div>
+        <div class="crud-buttons">
+            <button type="submit">Salvar</button>
+            <button type="button" onclick="window.history.back()">Voltar</button>
+        </div>
+    </form>
+</div>
 {% endblock %}

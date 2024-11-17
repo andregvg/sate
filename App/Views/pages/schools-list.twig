@@ -1,0 +1,29 @@
+{% extends "layouts/base.twig" %}
+
+{% block title %}Lista de Escolas{% endblock %}
+
+{% block content %}
+<h2>Escolas Cadastradas</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for escola in escolas %}
+        <tr>
+            <td>{{ escola.id }}</td>
+            <td>{{ escola.nome }}</td>
+            <td>{{ escola.endereco }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div>
+    <a href="/dashboard" class="btn btn-outline-primary">Voltar ao Dashboard</a>
+</div>
+{% endblock %}

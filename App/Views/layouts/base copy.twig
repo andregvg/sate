@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title | default('Sistema SATE') }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+<header class="bg-gradient-primary text-white p-3">
+  <h1 class="text-center">Sistema de Transporte Escolar</h1>
+  <nav class="d-flex justify-content-center">
+    <a href="/" class="btn btn-light mx-2">Home</a>
+    <a href="/dashboard" class="btn btn-light mx-2">Dashboard</a>
+    <a href="/schedules" class="btn btn-light mx-2">Agendamentos</a>
+    <a href="/schools" class="btn btn-light mx-2">Escolas</a>
+    <a href="/users" class="btn btn-light mx-2">Usuários</a>
+  </nav>
+</header>
+<main class="container my-5">
+    {% block content %}
+    <h2>Bem-vindo ao SATE</h2>
+    {% endblock %}
+</main>
+<footer class="bg-gradient-secondary text-white text-center p-3">
+  <p>&copy; 2024 SATE - Sistema de Transporte Escolar</p>
+  <p>Desenvolvido com 💙 em Ribeirão Preto</p>
+</footer>
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuIcon = document.querySelector(".menu-icon");
+            const nav = document.querySelector("nav");
+
+            menuIcon.addEventListener("click", () => {
+                nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+

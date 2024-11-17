@@ -1,8 +1,34 @@
-{% extends 'layouts/base.twig' %}
+{% extends "base.twig" %}
+
 {% block content %}
-<h1>Agendamentos</h1>
-<p>Lista de agendamentos disponíveis.</p>
-<div>
-    <a href="/dashboard" class="btn btn-outline-primary">Voltar ao Dashboard</a>
+<div class="crud-form">
+    <h2>Gerenciar Agendamentos</h2>
+    <form method="POST" action="/schedules/save">
+        <div>
+            <label for="school_id">Escola:</label>
+            <select id="school_id" name="school_id" required>
+                <!-- Opções de escolas dinâmicas -->
+            </select>
+        </div>
+        <div>
+            <label for="bus_id">Ônibus:</label>
+            <select id="bus_id" name="bus_id" required>
+                <!-- Opções de ônibus dinâmicas -->
+            </select>
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="pending">Pendente</option>
+                <option value="approved">Aprovado</option>
+                <option value="rejected">Rejeitado</option>
+                <option value="deleted">Excluído</option>
+            </select>
+        </div>
+        <div class="crud-buttons">
+            <button type="submit">Salvar</button>
+            <button type="button" onclick="window.history.back()">Voltar</button>
+        </div>
+    </form>
 </div>
 {% endblock %}
