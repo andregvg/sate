@@ -4,10 +4,11 @@ namespace App\Core;
 
 abstract class Controller
 {
-    protected View $view;
+    protected $view;
 
     public function __construct()
     {
-        $this->view = new View();
+        // Usa a instância singleton de View
+        $this->view = View::getInstance();
     }
 }

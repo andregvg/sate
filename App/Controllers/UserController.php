@@ -3,12 +3,14 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UserController extends Controller
 {
-    public function index(): string
+    public function index(Request $request, Response $response): Response
     {
-        return $this->render('pages/users.twig', [
+        return $this->view->render($response, 'pages/users.twig', [
             'title' => 'Usuários'
         ]);
     }
