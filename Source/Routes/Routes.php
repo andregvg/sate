@@ -13,10 +13,10 @@ class Routes {
     public static function register(App $app): void {
 
         // Rotas públicas
-        $app->get('/', [HomeController::class, 'home']);
-        $app->get('/user', [UserController::class, 'home']);
-        $app->get('/school', [SchoolController::class, 'home']);
-        $app->get('/schedule', [ScheduleController::class, 'home']);
+        $app->get('/', [HomeController::class, 'index']);
+        $app->get('/user', [UserController::class, 'index']);
+        $app->get('/school', [SchoolController::class, 'index']);
+        $app->get('/schedule', [ScheduleController::class, 'index']);
 
         // Rotas de autenticação
 

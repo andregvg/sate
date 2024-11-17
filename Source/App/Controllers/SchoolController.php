@@ -5,11 +5,11 @@ namespace App\Controllers;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class ScheduleController
+class SchoolController
 {
-    public function home(Request $request, Response $response): Response
+    public function index(Request $request, Response $response): Response
     {
-        $response->getBody()->write("Schedule Controler");
+        $response->getBody()->write("School Controler");
         return $response;
     }
 }

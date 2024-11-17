@@ -7,7 +7,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 class HomeController
 {
-    public function home(Request $request, Response $response): Response
+    public function index(Request $request, Response $response): Response
     {
         $response->getBody()->write("Home Controller");
         return $response;

@@ -1,13 +1,13 @@
 <?php
 
+// Autoload do Composer
+require __DIR__ . '/../vendor/autoload.php';
+
 use Slim\Factory\AppFactory;
 use Dotenv\Dotenv;
 use App\Routes\Routes;
 use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
-
-// Autoload do Composer
-require __DIR__ . '/../vendor/autoload.php';
 
 // Inicia a sessão
 session_start();
