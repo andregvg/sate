@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}SATE{% endblock %}</title>
+    <title>{{ title | default('Sistema SATE') }}</title>
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/custom.css">
 </head>
-
 <body>
-    
-    <header class="bg-primary text-white py-3">
-        <div class="container">
-            <h1>SATE</h1>
-        </div>
-    </header>
-    
-    <main class="container mt-4">
-        {% block content %}{% endblock %}
-    </main>
-    
-    <footer class="bg-dark text-white py-3 mt-auto">
-        <div class="container">
-            <p>© 2024 SATE</p>
-        </div>
-    </footer>
-    
-    <script src="/js/bootstrap.bundle.min.js"></script>
-
+<header class="bg-primary text-white p-3">
+    <div class="container">
+        <h1>SATE - Sistema de Agendamento</h1>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a href="/" class="nav-link text-white">Início</a></li>
+                <li class="nav-item"><a href="/users" class="nav-link text-white">Usuários</a></li>
+                <li class="nav-item"><a href="/schools" class="nav-link text-white">Escolas</a></li>
+                <li class="nav-item"><a href="/dashboard" class="nav-link text-white">Painel</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container my-5">
+    {% block content %}
+    <h2>Bem-vindo ao SATE</h2>
+    {% endblock %}
+</main>
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <p>&copy; 2024 Sistema SATE. Todos os direitos reservados.</p>
+        <ul class="list-unstyled">
+            <li>Contato: suporte@sate.com</li>
+            <li>Telefone: (16) 1234-5678</li>
+            <li>Endereço: Rua Exemplo, 123 - Ribeirão Preto, SP</li>
+        </ul>
+    </div>
+</footer>
+<script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
