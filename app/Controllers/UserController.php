@@ -8,7 +8,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class UserController {
     
-    public function index (Request $request, Response $response): Response {
+    public function home (Request $request, Response $response): Response {
          // Retorna lista de usuários
 
         $response->getBody()->write("Listagem de usuários");

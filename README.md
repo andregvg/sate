@@ -22,4 +22,4 @@ ou simplesmente
 php -S localhost:8080 -t public
 ```
 
-Abra o navegador com o link: [http://localhost:8080](http://localhost:8080)
+Abra o navegador com o link: [http://localhost:8000](http://localhost:8000)

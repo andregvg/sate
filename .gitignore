@@ -1,3 +1,19 @@
-vendor
+# Diretórios e arquivos relacionados ao Node.js
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Diretórios e arquivos relacionados ao Composer (PHP)
+vendor/
 composer.lock
+
+# Variáveis de ambiente
 .env
+
+# Logs
+*.log
+
+# Outros arquivos temporários que podem ser gerados durante o desenvolvimento
+*.bak
+*.tmp
+*.swp
