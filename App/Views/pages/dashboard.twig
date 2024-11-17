@@ -5,15 +5,21 @@
 {% block content %}
 <h2>Bem-vindo, {{ user_name }}</h2>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <h3>Agendamentos</h3>
         <p>Visualize ou gerencie os agendamentos.</p>
         <a href="/schedules" class="btn btn-primary">Ver Agendamentos</a>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
         <h3>Escolas</h3>
         <p>Gerencie as escolas cadastradas.</p>
         <a href="/schools" class="btn btn-primary">Ver Escolas</a>
     </div>
+    <div class="col-md-4">
+    <h3>Usuários</h3>
+    <p>Gerencie os usuários cadastradas.</p>
+    <a href="/users" class="btn btn-primary">Ver Usuários</a>
+    </div>
+
 </div>
 {% endblock %}
