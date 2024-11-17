@@ -1,143 +1,56 @@
-
-/* =======================================
-   Geral: Estilo base para o SATE
-   ======================================= */
-   body {
+/* Geral */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background-color: #0044cc;
-    color: white;
-    padding: 10px; /* Padding ajustado */
-    text-align: center;
+/* Colors and Gradients */
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #0d47a1, #42a5f5);
+}
+.bg-gradient-secondary {
+    background: linear-gradient(90deg, #424242, #757575);
 }
 
-main {
-    padding: 10px; /* Reduzindo espaçamento do main */
-}
-
-button, input[type="submit"], input[type="button"] {
-    cursor: pointer;
-}
-
-/* =======================================
-   Navegação: Estilo da barra de navegação
-   ======================================= */
-nav {
+/* Menu */
+.nav-menu {
     display: flex;
-    background-color: #003399;
-    padding: 10px;
     justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
 }
 
-nav a {
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
 }
 
-nav a:hover {
-    background-color: #0055ff; /* Mantendo hover mas eliminando branco ao redor */
-    color: #fff;
+.menu-toggle {
+    display: none; /* Oculta o botão de menu por padrão */
 }
 
-.crud-buttons button:hover {
-    background-color: #0055ff;
-}
-.menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.nav-menu.active {
-    display: block;
-}
-
+/* Responsividade */
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block;
+    .menu-toggle {
+        display: block; /* Mostra o botão de menu em telas pequenas */
     }
+
     .nav-menu {
-        display: none;
+        display: none; /* Oculta o menu em telas pequenas */
+        flex-direction: column;
     }
-}
 
-
-/* =======================================
-   Responsividade: Estilo para dispositivos móveis
-   ======================================= */
-@media (max-width: 768px) {
-    nav {
-        display: none; /* Oculta menu em telas menores */
+    .nav-menu.active {
+        display: flex; /* Exibe o menu quando a classe 'active' é adicionada */
     }
-    .menu-icon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 10px;
-    }
-}
-
-/* =======================================
-   Templates específicos
-   ======================================= */
-/* Login Page (login.twig) */
-.login-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 15px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.login-form input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-/* Home Page (home.twig) */
-.home-container {
-    text-align: center;
-    padding: 20px;
-}
-
-/* CRUD Pages */
-.crud-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 15px;
-    background: #f1f1f1;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.crud-form input, .crud-form select, .crud-form textarea {
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.crud-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.crud-buttons button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 3px;
-    background-color: #0044cc;
-    color: white;
-    transition: background-color 0.3s;
 }

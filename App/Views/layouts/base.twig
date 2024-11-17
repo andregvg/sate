@@ -4,31 +4,32 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title|default('SATE') }}</title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
-		<header>
-			<div class="menu-icon" onclick="toggleMenu()">☰</div>
-			<h1>SATE</h1>
+
+		<header class="bg-gradient-primary text-white">
+			<h1 class="text-center">SATE</h1>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+			<nav id="nav-menu" class="nav-menu d-flex justify-content-center">
+				<a href="/" class="mx-2">Home</a>
+				<a href="/sobre" class="mx-2">Sobre</a>
+				<a href="/contato" class="mx-2">Contato</a>
+			</nav>
 		</header>
-		<nav>
-			<a href="/">Início</a>
-			<a href="/login">Login</a>
-			<a href="/sobre">Sobre</a>
-			<a href="/contato">Contato</a>
-		</nav>
+
 		<main>
 			{% block content %}{% endblock %}
 		</main>
-		<footer>
-			<footer class="bg-gradient-secondary text-white text-center p-3">
-				<p>&copy; 2024 SATE - Sistema de Transporte Escolar</p>
-				<p>Desenvolvido com 💙 em Ribeirão Preto</p>
-			</footer>
+
+		<footer class="bg-gradient-secondary text-white text-center">
+			<p>&copy; 2024 SATE - Sistema de Agendamentos de Transporte Extraclasse</p>
+			<p>Desenvolvido com 💙 em Ribeirão Preto</p>
 		</footer>
 
 		<script src="/js/bootstrap.bundle.min.js"></script>
 		<script src="/js/menu.js"></script>
-		
+
 	</body>
 </html>
