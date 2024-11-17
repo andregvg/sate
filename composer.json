@@ -14,7 +14,7 @@
     }
   },
   "files": [
-    "bootstrap/env.php"
+    
   ],
   "require": {
     "slim/slim": "4.*",
