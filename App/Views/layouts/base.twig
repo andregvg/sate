@@ -9,13 +9,19 @@
 	</head>
 	<body>
 
-		<header class="bg-gradient-primary text-white">
+		<header class="bg-gradient-1 text-white">
 			<h1 class="text-center">SATE</h1>
-      <button id="menu-toggle" class="menu-toggle">☰</button>
-			<nav id="nav-menu" class="nav-menu d-flex justify-content-center">
-				<a href="/" class="mx-2">Home</a>
-				<a href="/sobre" class="mx-2">Sobre</a>
-				<a href="/contato" class="mx-2">Contato</a>
+			<nav class="navbar d-flex bg-gradient-3 justify-content-center">
+				<button class="navbar-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<div class="navbar-links">
+					<a href="/" class="mx-2">Home</a>
+					<a href="/sobre" class="mx-2">Sobre</a>
+					<a href="/contato" class="mx-2">Contato</a>
+				</div>
 			</nav>
 		</header>
 
@@ -23,7 +29,7 @@
 			{% block content %}{% endblock %}
 		</main>
 
-		<footer class="bg-gradient-secondary text-white text-center">
+		<footer class="bg-gradient-2 text-white text-center">
 			<p>&copy; 2024 SATE - Sistema de Agendamentos de Transporte Extraclasse</p>
 			<p>Desenvolvido com 💙 em Ribeirão Preto</p>
 		</footer>

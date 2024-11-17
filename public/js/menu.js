@@ -1,8 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('nav-menu');
-
-    menuToggle.addEventListener('click', function () {
-        menu.classList.toggle('active'); // Adiciona ou remove a classe 'active'
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.navbar-toggle');
+    const links = document.querySelector('.navbar-links');
+  
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('active');
     });
-});
+  });
+  

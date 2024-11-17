@@ -1,56 +1,152 @@
-/* Geral */
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Colors and Gradients */
-.bg-gradient-primary {
-    background: linear-gradient(90deg, #0d47a1, #42a5f5);
-}
-.bg-gradient-secondary {
-    background: linear-gradient(90deg, #424242, #757575);
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(180deg, #f8f9fa, #e9ecef);
+    color: #212529;
 }
 
-/* Menu */
-.nav-menu {
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
+header h1{
+    margin: 0;
+    padding: 5px 0;
+    font-size: 3rem;
+}
+
+main, footer{
     padding: 10px;
 }
 
-.nav-menu ul {
-    list-style-type: none;
-    padding: 0;
+footer p{
+    margin: 0;
+}
+/* Colors and Gradients */
+.bg-gradient-1 {
+    background: linear-gradient(90deg, #0d47a1, #42a5f5);
 }
 
-.nav-menu li {
-    margin: 0 15px;
+.bg-gradient-2 {
+    background: linear-gradient(90deg, #424242, #757575);
 }
 
-.nav-menu a {
-    color: white;
+.bg-gradient-3 {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+/* Barra de navegação */
+.navbar {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
 }
 
-.menu-toggle {
-    display: none; /* Oculta o botão de menu por padrão */
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
-/* Responsividade */
+/* Menu sanduíche */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar-links.hidden {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Mostra o botão de menu em telas pequenas */
-    }
-
-    .nav-menu {
-        display: none; /* Oculta o menu em telas pequenas */
+    .navbar-links {
+        display: none;
         flex-direction: column;
+        gap: 0;
     }
 
-    .nav-menu.active {
-        display: flex; /* Exibe o menu quando a classe 'active' é adicionada */
+    .navbar-links.active {
+        display: flex;
+        background: #0056b3;
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
     }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+}
+
+/* Formulários */
+form {
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 500px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
 }
