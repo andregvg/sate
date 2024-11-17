@@ -45,6 +45,29 @@ nav a:hover {
     color: #fff;
 }
 
+.crud-buttons button:hover {
+    background-color: #0055ff;
+}
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+    }
+}
+
+
 /* =======================================
    Responsividade: Estilo para dispositivos móveis
    ======================================= */
@@ -117,26 +140,4 @@ nav a:hover {
     background-color: #0044cc;
     color: white;
     transition: background-color 0.3s;
-}
-
-.crud-buttons button:hover {
-    background-color: #0055ff;
-}
-.menu-icon {
-    display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.nav-menu.active {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    .nav-menu {
-        display: none;
-    }
 }
