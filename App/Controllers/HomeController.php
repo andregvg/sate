@@ -10,6 +10,7 @@ class HomeController
     public function index(Request $request, Response $response): Response
     {
         $response->getBody()->write("Home Controller");
+        var_dump($app);
         return $response;
     }
 }

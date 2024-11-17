@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Routes;
+namespace App\Core;
 
 use App\Controllers\HomeController;
 use Slim\App;

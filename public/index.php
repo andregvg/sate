@@ -3,15 +3,11 @@
 // Autoload do Composer
 require __DIR__ . '/../vendor/autoload.php';
 
-
-use Slim\Factory\AppFactory;
 use Dotenv\Dotenv;
-use App\Routes\Routes;
+use Slim\Factory\AppFactory;
 use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
-
-// Inicia a sessão
-session_start();
+use App\Core\Routes;
 
 // Carrega as variáveis de ambiente do arquivo .env
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
