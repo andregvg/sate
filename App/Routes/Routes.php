@@ -2,11 +2,8 @@
 
 namespace App\Routes;
 
-use Slim\App;
 use App\Controllers\HomeController;
-use App\Controllers\ScheduleController;
-use App\Controllers\SchoolController;
-use App\Controllers\UserController;
+use Slim\App;
 
 class Routes {
 
@@ -14,9 +11,6 @@ class Routes {
 
         // Rotas públicas
         $app->get('/', [HomeController::class, 'index']);
-        $app->get('/user', [UserController::class, 'index']);
-        $app->get('/school', [SchoolController::class, 'index']);
-        $app->get('/schedule', [ScheduleController::class, 'index']);
 
         // Rotas de autenticação
 
