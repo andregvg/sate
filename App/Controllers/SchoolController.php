@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Message\ResponseInterface as Response;
+use App\Core\Controller;
 
-class SchoolController
+class SchoolController extends Controller
 {
-    public function index(Request $request, Response $response): Response
+    public function index(): string
     {
-        $response->getBody()->write("School Controler");
-        return $response;
+        return $this->render('pages/schools.twig', [
+            'title' => 'Escolas'
+        ]);
     }
 }

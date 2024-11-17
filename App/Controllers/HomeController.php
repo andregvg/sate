@@ -2,15 +2,19 @@
 
 namespace App\Controllers;
 
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Message\ResponseInterface as Response;
+use App\Core\Controller;
 
-class HomeController
+class HomeController extends Controller
 {
-    public function index(Request $request, Response $response): Response
+    public function index($request, $response)
     {
-        $response->getBody()->write("Home Controller");
-        var_dump($app);
+        // Renderiza a view da página inicial
+        $html = $this->view->render('pages/home.twig', [
+            'title' => 'Página Inicial',
+            'message' => 'Bem-vindo ao SATE!',
+        ]);
+
+        $response->getBody()->write($html);
         return $response;
     }
 }

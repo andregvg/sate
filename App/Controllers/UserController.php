@@ -2,24 +2,14 @@
 
 namespace App\Controllers;
 
-use Psr\Http\Message\ResponseInterface as Response;
-use Psr\Http\Message\ServerRequestInterface as Request;
+use App\Core\Controller;
 
-
-class UserController
+class UserController extends Controller
 {
-
-    public function index(Request $request, Response $response): Response
+    public function index(): string
     {
-        // Retorna lista de usuários
-
-        $response->getBody()->write("Listagem de usuários");
-        return $response;
-    }
-
-    public function store(Request $request, Response $response): Response
-    {
-        // Lida com criação de um novo usuário
-        return $response;
+        return $this->render('pages/users.twig', [
+            'title' => 'Usuários'
+        ]);
     }
 }

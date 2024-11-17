@@ -2,14 +2,14 @@
 
 namespace App\Controllers;
 
-use Psr\Http\Message\ServerRequestInterface as Request;
-use Psr\Http\Message\ResponseInterface as Response;
+use App\Core\Controller;
 
-class ScheduleController
+class ScheduleController extends Controller
 {
-    public function index(Request $request, Response $response): Response
+    public function index(): string
     {
-        $response->getBody()->write("Schedule Controler");
-        return $response;
+        return $this->render('pages/schedules.twig', [
+            'title' => 'Agendamentos'
+        ]);
     }
 }

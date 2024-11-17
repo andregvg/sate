@@ -3,25 +3,22 @@
 namespace App\Core;
 
 use Slim\App;
+use App\Controllers\HomeController;
+use App\Controllers\UserController;
+use App\Controllers\SchoolController;
+use App\Controllers\LoginController;
+use App\Controllers\DashboardController;
+use App\Controllers\ScheduleController;
 
 class Routes
 {
     public static function register(App $app): void
     {
-        // Rotas publicas
-        $app->get('/', \App\Controllers\HomeController::class . ':index');
-
-        // Outras rotas...
-
-        // Rotas de autenticação
-
-        // Rotas protegidas por middleware de autenticação
-
-        // Rotas de usuários
-
-        // Rotas de escolas
-
-        // Rotas de agendamentos
-
+        $app->get('/', [HomeController::class, 'index']);
+        $app->get('/users', [UserController::class, 'index']);
+        $app->get('/schools', [SchoolController::class, 'index']);
+        $app->get('/login', [LoginController::class, 'index']);
+        $app->get('/dashboard', [DashboardController::class, 'index']);
+        $app->get('/schedules', [ScheduleController::class, 'index']);
     }
 }

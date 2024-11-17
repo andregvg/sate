@@ -2,15 +2,12 @@
 
 namespace App\Core;
 
-use App\Core\Views;
-use Slim\Views\Twig;
-
 abstract class Controller
 {
-    protected Twig $view;
+    protected View $view;
 
     public function __construct()
     {
-        $this->view = Views::create();
+        $this->view = new View();
     }
 }
