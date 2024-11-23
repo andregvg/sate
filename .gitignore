@@ -17,3 +17,6 @@ composer.lock
 *.bak
 *.tmp
 *.swp
+
+# Dados do banco de dados
+database_data.sql
