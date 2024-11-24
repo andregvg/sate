@@ -19,4 +19,4 @@ composer.lock
 *.swp
 
 # Dados do banco de dados
-database_data.sql
+sql/database_data.sql
