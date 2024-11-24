@@ -13,14 +13,13 @@
       "App\\": "app"
     }
   },
-  "files": [
-    
-  ],
+  "files": [],
   "require": {
+    "php": "^8.2",
     "slim/slim": "4.*",
     "slim/psr7": "^1.7",
-    "vlucas/phpdotenv": "^5.6",
-    "slim/twig-view": "^3.4"
+    "slim/twig-view": "^3.4",
+    "vlucas/phpdotenv": "^5.6"
   },
   "scripts": {
     "start": "php -S localhost:8000 -t public"

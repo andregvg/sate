@@ -1,25 +1,31 @@
 # SATE - Sistema de Agendamento de Transporte Extraclasse
 
-## Git
+## CONFIGURAÇÃO INICIAL
+Renomeie o arquivo `.env.exemple` para `.env` e preencha com as informações necessárias
 
-## Uso do servidor web integrado no PHP
+Execute no terminal `composer install`
 
-### A partir do Composer
-* Para rodar a aplicação em desenvolvimento à partir do Composer, execute:
+Use o arquivo `sql\database_structure` para fazer um dump da estrutura do banco de dados
+
+## AMBIENTE DE DESENVOLVIMENTO
+* Para rodar a aplicação em desenvolvimento, execute:
+
+### a partir do Composer:
 ```bash
 composer start
 ```
 
-### Manual
-* Acesse a o diretório `public/` e rede o comando:
+### diretamente:
+
+* dentro do diretório `public/`:
 ```bash
 cd public
 php -S localhost:8080
 ```
+ou
 
-ou simplesmente
 ```bash
 php -S localhost:8080 -t public
 ```
 
-Abra o navegador com o link: [http://localhost:8000](http://localhost:8000)
+Abra o navegador com a url: [http://localhost:8000](http://localhost:8000)
